@@ -1,3 +1,4 @@
+
 class ShoppingListItem {
   constructor(name, description, isDone) {
     this.name = name;
