@@ -1,10 +1,9 @@
-const Shop = require('../js/shopping-list-item.js');
-const ShoppingItem = Shop.ShoppingListItem;
-const chai = require('chai');
 const expect = chai.expect;
-const should = chai.should();
+const assert = chai.assert;
+//const should = chai.should();
 
 describe('Shopping Item', function() {
+  //let ShoppingItem = new ShoppingListItem();
   it('should be a function', function() {
     expect(ShoppingItem).to.be.a('function');
   });
@@ -16,6 +15,6 @@ describe('Shopping Item', function() {
 
   it('should have a description', function() {
     let cabbage = new ShoppingItem('Cabbage', 'Refreshing Beverage');
-    cabbage.description.should.equal('Refreshing Beverage')
-  })
+    cabbage.description.should.equal('Refreshing Beverage');
+  });
 });

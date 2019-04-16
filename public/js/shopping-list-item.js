@@ -5,7 +5,6 @@ class ShoppingListItem {
   }
 }
 
-
 module.exports = {
   ShoppingListItem: ShoppingListItem,
 };
