@@ -1,8 +1,10 @@
 class ShoppingListItem {
-  constructor(name) {
+  constructor(name, description) {
     this.name = name;
+    this.description = description;
   }
 }
+
 
 module.exports = {
   ShoppingListItem: ShoppingListItem,
