@@ -19,15 +19,12 @@ Setup Mocha and Chai to run tests on your application in the browser.
 
 ```bash
 behavior-driven-shopping-list
-├── public
-│   ├── js
-│   ├── test
-│   │   ├── shopping-list-item.test.js
-│   │   └── shopping-list.test.js
-│   └── test.html
+├── test
+│   └── shopping-list.test.js
 ├── node_modules
 │   ├── chai
 │   └── mocha
+├── test.html
 ├── README.md
 └── package.json
 ````
@@ -95,17 +92,15 @@ Create implementation files.
 
 ```bash
 behavior-driven-shopping-list
-├── public
-│   ├── js
-│   │   ├── shopping-list-item.js
-│   │   └── shopping-list.js
-│   ├── test
-│   │   ├── shopping-list-item.test.js
-│   │   └── shopping-list.test.js
-│   └── test.html
+├── js
+│   ├── shopping-list-item.js
+│   └── shopping-list.js
+├── test
+│   └── shopping-list.test.js
 ├── node_modules
 │   ├── chai
 │   └── mocha
+├── test.html
 ├── README.md
 └── package.json
 ````
@@ -141,19 +136,17 @@ Create implementation files.
 
 ```bash
 behavior-driven-shopping-list
-├── public
-│   ├── js
-│   │   ├── app.js
-│   │   ├── shopping-list-item.js
-│   │   └── shopping-list.js
-│   ├── test
-│   │   ├── shopping-list-item.test.js
-│   │   └── shopping-list.test.js
-│   ├── test.html
-│   └── index.html
+├── js
+│   ├── app.js
+│   ├── shopping-list-item.js
+│   └── shopping-list.js
+├── test
+│   └── shopping-list.test.js
 ├── node_modules
 │   ├── chai
 │   └── mocha
+├── index.html
+├── test.html
 ├── README.md
 └── package.json
 ````
