@@ -22,4 +22,8 @@ describe('Shopping Item', function() {
   it('should accept a name argument', function() {
     expect(foo.name).to.equal("Beer");
   });
+
+  it('should accept a description argument', function() {
+    expect(foo.description).to.equal('Refreshing Beverage');
+  });
 });
