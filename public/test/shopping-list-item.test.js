@@ -2,7 +2,7 @@ const expect = chai.expect;
 const assert = chai.assert;
 
 describe('Shopping Item', function() {
-  let foo = new ShoppingListItem();
+  let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
   it('ShoppingListItem should be a class', function() {
     expect(foo).to.be.instanceOf(ShoppingListItem);
   });
@@ -18,4 +18,8 @@ describe('Shopping Item', function() {
   it('should have a isDone property', function() {
     expect(foo).to.haveOwnProperty('isDone');
   });
+
+  // it('should accept a name argument', function() {
+  //   expect(ShoppingListItem).to.be.arguments;
+  // });
 });
