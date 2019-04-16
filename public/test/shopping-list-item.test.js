@@ -19,7 +19,7 @@ describe('Shopping Item', function() {
     expect(foo).to.haveOwnProperty('isDone');
   });
 
-  // it('should accept a name argument', function() {
-  //   expect(ShoppingListItem).to.be.arguments;
-  // });
+  it('should accept a name argument', function() {
+    expect(foo.name).to.equal("Beer");
+  });
 });
