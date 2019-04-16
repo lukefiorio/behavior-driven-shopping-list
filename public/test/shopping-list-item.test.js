@@ -1,11 +1,10 @@
 const expect = chai.expect;
 const assert = chai.assert;
-//const should = chai.should();
 
 describe('Shopping Item', function() {
-  //let ShoppingItem = new ShoppingListItem();
-  it('should be a function', function() {
-    expect(ShoppingItem).to.be.a('function');
+  let foo = new ShoppingListItem();
+  it('ShoppingListItem should be a class', function() {
+    expect(foo).to.be.instanceOf(ShoppingListItem);
   });
 
   it('should have a name', function() {
