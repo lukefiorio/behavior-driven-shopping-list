@@ -4,7 +4,3 @@ class ShoppingListItem {
     this.description = description;
   }
 }
-
-module.exports = {
-  ShoppingListItem: ShoppingListItem,
-};

@@ -7,13 +7,11 @@ describe('Shopping Item', function() {
     expect(foo).to.be.instanceOf(ShoppingListItem);
   });
 
-  it('should have a name', function() {
-    let beer = new ShoppingItem('Beer');
-    beer.name.should.equal('Beer');
+  it('should have a name property', function() {
+    expect(foo).to.haveOwnProperty('name');
   });
 
-  it('should have a description', function() {
-    let cabbage = new ShoppingItem('Cabbage', 'Refreshing Beverage');
-    cabbage.description.should.equal('Refreshing Beverage');
+  it('should have a description property', function() {
+    expect(foo).to.haveOwnProperty('description');
   });
 });
