@@ -14,4 +14,8 @@ describe('Shopping Item', function() {
   it('should have a description property', function() {
     expect(foo).to.haveOwnProperty('description');
   });
+
+  it('should have a isDone property', function() {
+    expect(foo).to.haveOwnProperty('isDone');
+  });
 });
