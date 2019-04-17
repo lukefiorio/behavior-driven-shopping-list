@@ -13,3 +13,9 @@ describe('ShoppingList', function() {
     expect(bar.items.length).to.equal(0);
   });
 });
+
+describe('addItem', function(){
+  it ('Should have a method named addItem', function (){
+    expect(bar.addItem).to.be.a('function');
+  })
+})
