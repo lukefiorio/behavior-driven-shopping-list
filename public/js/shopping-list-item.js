@@ -8,4 +8,8 @@ class ShoppingListItem {
   check = function() {
     this.isDone = true;
   };
+
+  uncheck = function() {
+    this.isDone = false;
+  };
 }

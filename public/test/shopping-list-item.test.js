@@ -39,3 +39,11 @@ describe('Check Method', function() {
     expect(foo.isDone).to.equal(true);
   });
 });
+
+describe('Uncheck Method', function() {
+  let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
+  foo.uncheck();
+  it('Uncheck method should set isDone property to false', function() {
+    expect(foo.isDone).to.equal(false);
+  });
+});
