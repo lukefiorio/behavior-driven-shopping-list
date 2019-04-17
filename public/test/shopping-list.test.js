@@ -31,22 +31,32 @@ describe('addItem', function() {
   });
 });
 
-describe('removeItem', function(){
+describe('removeItem', function() {
   let bar = new ShoppingList();
-  it('Should have a method named removeItem', function(){
+  it('Should have a method named removeItem', function() {
     expect(bar.removeItem).to.be.a('function');
-  })
+  });
 
   let fruit = new ShoppingListItem('celary', 'sour as hell');
   bar.addItem(fruit);
   bar.removeItem(fruit);
-  it('Should remove the the last item in the items list if there is no parameters, else it does nothing', function(){
-    expect(bar.items).to.not.contain(fruit);
+  it('Should remove the the last item in the items list if there is no parameters', function() {
+    expect(bar.items).should.not.contain(fruit);
   });
-  
+
   bar = new ShoppingList();
   bar.items.push('bad thing');
-  it('Should throw an error if item is not a ShoppingListItem Object', function(){
+  it('Should throw an error if item is not a ShoppingListItem Object', function() {
     expect(bar.removeItem.bind(bar)).to.throw('Wrong');
   });
-})
+
+  bar = new ShoppingList();
+  fruit = new ShoppingListItem('celary', 'sour as hell');
+  sake = new ShoppingListItem('Sake', 'The BEST');
+  bar.addItem(fruit);
+  bar.addItem(sake);
+  it('Should remove item from ShoppingList.items if is a ShoppingListItem', function() {
+    expect(bar.removeItem(sake)).should.not.contain(sake);
+    expect(bar.removeItem(fruit)).should.not.contain(fruit);
+  });
+});

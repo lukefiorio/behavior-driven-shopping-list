@@ -16,21 +16,14 @@ class ShoppingList {
     if (index === -1 || this.items.length === 0) {
       throw new Error('Wrong');
     }
-    if (!item) {
+    if (!item && this.items[length - 1] instanceof ShoppingListItem) {
       this.items.pop();
     }
     if (!(item instanceof ShoppingListItem) && items.includes(item)) {
       throw new Error('Wrong');
     }
-
-    // let index = this.items.indexOf(item);
-    // if(!item && this.items.length >= 1){
-    //   items.pop();
-    // } else if (index > -1) {
-    //   this.items.splice(index,1);
-    // }
-    // if (!item instanceof ShoppingListItem) {
-    //   throw new Error('Wrong');
+    if (index > -1) {
+      this.items.splice(index, 1);
+    }
   };
 }
-// }
