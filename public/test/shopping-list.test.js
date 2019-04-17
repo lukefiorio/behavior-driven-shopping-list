@@ -9,6 +9,7 @@ describe('ShoppingList', function() {
   });
 
   it('ShoppingList Items should initialize as empty array', function() {
+    expect(bar.items).to.be.instanceOf(Array);
     expect(bar.items.length).to.equal(0);
   });
 });
