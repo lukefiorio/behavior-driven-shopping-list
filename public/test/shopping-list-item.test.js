@@ -1,5 +1,6 @@
 const expect = chai.expect;
 const assert = chai.assert;
+const should = chai.should();
 
 let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
 

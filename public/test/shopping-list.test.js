@@ -15,7 +15,13 @@ describe('ShoppingList', function() {
 });
 
 describe('addItem', function(){
+  let bar = new ShoppingList();
   it ('Should have a method named addItem', function (){
     expect(bar.addItem).to.be.a('function');
-  })
-})
+  });
+  let sake = new ShoppingListItem('Sake', 'The BEST');
+  bar.addItem(sake);
+  it ('Invoking addItem method should add item to Shopping List', function (){
+    bar.items.should.contain(sake);
+  });
+});

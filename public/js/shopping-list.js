@@ -3,7 +3,7 @@ class ShoppingList {
     this.items = [];
   }
   
-  addItem = function(){
-
+  addItem = function(item){
+    this.items.push(item);
   };
 }
