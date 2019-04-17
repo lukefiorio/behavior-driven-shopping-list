@@ -27,12 +27,12 @@ class ShoppingList {
     }
   };
 
-  render = function(){
-    let itemsAsString = "<ul>";
-    for(let i = 0; i < this.items.length; i++){
+  render = function() {
+    let itemsAsString = '<ul>';
+    for (let i = 0; i < this.items.length; i++) {
       itemsAsString += `${this.items[i].render()}`;
     }
     itemsAsString += '</ul>';
     return itemsAsString;
-  }
+  };
 }
