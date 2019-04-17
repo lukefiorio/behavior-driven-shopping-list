@@ -14,14 +14,19 @@ describe('ShoppingList', function() {
   });
 });
 
-describe('addItem', function(){
+describe('addItem', function() {
   let bar = new ShoppingList();
-  it ('Should have a method named addItem', function (){
+  it('Should have a method named addItem', function() {
     expect(bar.addItem).to.be.a('function');
   });
   let sake = new ShoppingListItem('Sake', 'The BEST');
   bar.addItem(sake);
-  it ('Invoking addItem method should add item to Shopping List', function (){
+  it('Invoking addItem method should add item to Shopping List', function() {
     bar.items.should.contain(sake);
+  });
+
+  it('Should throw error if adding item that is not a Shopping List Item', function() {
+    let bar = new ShoppingList();
+    expect(bar.addItem.bind('pizza')).to.throw('Wrong');
   });
 });
