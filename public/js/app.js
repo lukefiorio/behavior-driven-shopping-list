@@ -9,12 +9,18 @@ function addToShoppingList(event) {
   let checkBoxes = document.getElementsByClassName('check');
 
   for (let i = 0; i < checkBoxes.length; i++) {
-    checkBoxes[i].addEventListener('change', changeCheckedStatus);
+    checkBoxes[i].addEventListener('change', function() {
+      changeCheckedStatus(i, checkBoxes[i]);
+    });
   }
 }
 
 function changeCheckedStatus(idx, checkbox) {
-  console.log('changed');
+  if (checkbox.checked) {
+    ourList.items[idx].check();
+  } else if (!checkbox.checked) {
+    ourList.items[idx].uncheck();
+  }
 }
 
 addShoppingListItemButton.addEventListener('click', addToShoppingList);
