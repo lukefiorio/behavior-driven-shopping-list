@@ -30,3 +30,23 @@ describe('addItem', function() {
     expect(bar.addItem.bind('pizza')).to.throw('Wrong');
   });
 });
+
+describe('removeItem', function(){
+  let bar = new ShoppingList();
+  it('Should have a method named removeItem', function(){
+    expect(bar.removeItem).to.be.a('function');
+  })
+
+  let fruit = new ShoppingListItem('celary', 'sour as hell');
+  bar.addItem(fruit);
+  bar.removeItem(fruit);
+  it('Should remove the the last item in the items list if there is no parameters, else it does nothing', function(){
+    expect(bar.items).to.not.contain(fruit);
+  });
+  
+  bar = new ShoppingList();
+  bar.items.push('bad thing');
+  it('Should throw an error if item is not a ShoppingListItem Object', function(){
+    expect(bar.removeItem.bind(bar)).to.throw('Wrong');
+  });
+})
