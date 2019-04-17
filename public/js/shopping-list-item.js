@@ -12,4 +12,8 @@ class ShoppingListItem {
   uncheck = function() {
     this.isDone = false;
   };
+
+  render = function(){
+    return `<ul><li class="completed_${this.isDone}"><span>${this.name}</span><span>${this.description}.</span></li><ul>`;
+  }
 }

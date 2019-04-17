@@ -47,3 +47,15 @@ describe('Uncheck Method', function() {
     expect(foo.isDone).to.equal(false);
   });
 });
+
+describe('Render Method', function(){
+  let foo = new ShoppingListItem('Tacos', 'Tasty Cat')
+  it('Render should be a method', function(){
+    expect(foo.render).is.a('function');
+    
+  });
+  
+  it('Render method will construct and return an HTML formatted string', function(){
+    expect(foo.render()).is.equal(`<ul><li class="completed_false"><span>Tacos</span><span>Tasty Cat.</span></li><ul>`);
+  });
+});
