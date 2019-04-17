@@ -5,4 +5,8 @@ class ShoppingListItem {
     this.description = description;
     this.isDone = isDone;
   }
+
+  check = function(){
+
+  };
 }

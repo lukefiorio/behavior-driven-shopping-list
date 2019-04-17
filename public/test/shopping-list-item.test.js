@@ -26,4 +26,8 @@ describe('Shopping Item', function() {
   it('should accept a description argument', function() {
     expect(foo.description).to.equal('Refreshing Beverage');
   });
+
+  it('should have a function named check', function(){
+    expect(foo.check).to.be.a('function');
+  })
 });
