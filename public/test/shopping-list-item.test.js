@@ -48,14 +48,18 @@ describe('Uncheck Method', function() {
   });
 });
 
-describe('Render Method', function(){
-  let foo = new ShoppingListItem('Tacos', 'Tasty Cat')
-  it('Render should be a method', function(){
+describe('Render Method', function() {
+  let foo = new ShoppingListItem('Tacos', 'Tasty Cat');
+  it('Render should be a method', function() {
     expect(foo.render).is.a('function');
-    
   });
-  
-  it('Render method will construct and return an HTML formatted string', function(){
+
+  it('Render method will construct and return an HTML formatted string', function() {
     expect(foo.render()).is.equal(`<ul><li class="completed_false"><span>Tacos</span><span>Tasty Cat.</span></li><ul>`);
+  });
+
+  it(`Render method should return "completed_true" if isDone is true`, function() {
+    foo.check();
+    expect(foo.render()).is.equal(`<ul><li class="completed_true"><span>Tacos</span><span>Tasty Cat.</span></li><ul>`);
   });
 });
