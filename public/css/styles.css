@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+#header {
+  text-align: center; }
+
+h1 {
+  font-family: 'Cinzel', serif;
+  color: green; }
