@@ -9,7 +9,7 @@ function addToShoppingList(event) {
   let checkBoxes = document.getElementsByClassName('check');
 
   for (let i = 0; i < checkBoxes.length; i++) {
-    checkBoxes[i].addEventListener('onchange', changeCheckedStatus);
+    checkBoxes[i].addEventListener('change', changeCheckedStatus);
   }
 }
 
