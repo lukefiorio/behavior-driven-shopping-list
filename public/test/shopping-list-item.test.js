@@ -2,9 +2,10 @@ const expect = chai.expect;
 const assert = chai.assert;
 const should = chai.should();
 
-let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
+
 
 describe('Shopping Item', function() {
+  let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
   it('ShoppingListItem should be a class', function() {
     expect(foo).to.be.instanceOf(ShoppingListItem);
   });
@@ -35,6 +36,7 @@ describe('Shopping Item', function() {
 });
 
 describe('Check Method', function() {
+  let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
   foo.check();
   it('Check method should set isDone property to true', function() {
     expect(foo.isDone).to.equal(true);
@@ -56,11 +58,11 @@ describe('Render Method', function() {
   });
 
   it('Render method will construct and return an HTML formatted string', function() {
-    expect(foo.render()).is.equal(`<ul><li class="completed_false"><span>Tacos</span><span>Tasty Cat.</span></li><ul>`);
+    expect(foo.render()).is.equal(`<li class="completed_false"><span>Tacos</span><span>Tasty Cat.</span></li>`);
   });
 
   it(`Render method should return "completed_true" if isDone is true`, function() {
     foo.check();
-    expect(foo.render()).is.equal(`<ul><li class="completed_true"><span>Tacos</span><span>Tasty Cat.</span></li><ul>`);
+    expect(foo.render()).is.equal(`<li class="completed_true"><span>Tacos</span><span>Tasty Cat.</span></li>`);
   });
 });

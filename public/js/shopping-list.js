@@ -26,4 +26,13 @@ class ShoppingList {
       this.items.splice(index, 1);
     }
   };
+
+  render = function(){
+    let itemsAsString = "<ul>";
+    for(let i = 0; i < this.items.length; i++){
+      itemsAsString += `${this.items[i].render()}`;
+    }
+    itemsAsString += '</ul>';
+    return itemsAsString;
+  }
 }

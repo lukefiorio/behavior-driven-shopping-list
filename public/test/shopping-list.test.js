@@ -1,6 +1,7 @@
-let bar = new ShoppingList();
+
 
 describe('ShoppingList', function() {
+  let bar = new ShoppingList();
   it('ShoppingList should be a class', function() {
     expect(bar).to.be.instanceOf(ShoppingList);
   });
@@ -51,12 +52,28 @@ describe('removeItem', function() {
   });
 
   bar = new ShoppingList();
-  fruit = new ShoppingListItem('celary', 'sour as hell');
+  // fruit = new ShoppingListItem('celary', 'sour as hell');
   sake = new ShoppingListItem('Sake', 'The BEST');
   bar.addItem(fruit);
   bar.addItem(sake);
+  
   it('Should remove item from ShoppingList.items if is a ShoppingListItem', function() {
     expect(bar.removeItem(sake)).should.not.contain(sake);
     expect(bar.removeItem(fruit)).should.not.contain(fruit);
+  });
+  console.log(bar.render());
+});
+
+
+
+describe('render', function() {
+  let bar = new ShoppingList();
+  it('Should return concatenated results of the render function of the shopping list items', function(){
+    console.log(bar.render());
+    let vegetables = new ShoppingListItem('celary', 'sour as hell');
+    let sake = new ShoppingListItem('Sake', 'The BEST');
+    bar.addItem(vegetables);
+    bar.addItem(sake);
+    expect(bar.render()).to.equal('<ul><li class="completed_false"><span>celary</span><span>sour as hell.</span></li><li class="completed_false"><span>Sake</span><span>The BEST.</span></li></ul>');
   });
 });
