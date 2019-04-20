@@ -2,10 +2,9 @@ const expect = chai.expect;
 const assert = chai.assert;
 const should = chai.should();
 
-
-
 describe('Shopping Item', function() {
   let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
+
   it('ShoppingListItem should be a class', function() {
     expect(foo).to.be.instanceOf(ShoppingListItem);
   });
@@ -38,6 +37,7 @@ describe('Shopping Item', function() {
 describe('Check Method', function() {
   let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
   foo.check();
+
   it('Check method should set isDone property to true', function() {
     expect(foo.isDone).to.equal(true);
   });
@@ -46,6 +46,7 @@ describe('Check Method', function() {
 describe('Uncheck Method', function() {
   let foo = new ShoppingListItem('Beer', 'Refreshing Beverage');
   foo.uncheck();
+
   it('Uncheck method should set isDone property to false', function() {
     expect(foo.isDone).to.equal(false);
   });
@@ -53,6 +54,7 @@ describe('Uncheck Method', function() {
 
 describe('Render Method', function() {
   let foo = new ShoppingListItem('Tacos', 'Tasty Cat');
+
   it('Render should be a method', function() {
     expect(foo.render).is.a('function');
   });

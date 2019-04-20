@@ -10,10 +10,10 @@ function changeCheckedStatus(idx, checkbox) {
 
 function removedItemButtonClicked(idx) {
   ourList.removeItem(ourList.items[idx]);
-  showStuff();
+  displayShoppingList();
 }
 
-function showStuff() {
+function displayShoppingList() {
   let listItems = ourList.render();
   content.innerHTML = listItems;
   let checkBoxes = document.getElementsByClassName('check');
@@ -35,7 +35,7 @@ function showStuff() {
 function addToShoppingList(event) {
   let newItem = new ShoppingListItem(title.value, description.value);
   ourList.addItem(newItem);
-  showStuff();
+  displayShoppingList();
 }
 
 addShoppingListItemButton.addEventListener('click', addToShoppingList);
